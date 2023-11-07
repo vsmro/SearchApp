@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+Utilizator-->(START)
+(START) --> (Selecteaza optiunea \n"Alege Operator")
+(START) --> (Selecteaza optiunea \n"Input Tablou")
+(START) --> (Selecteaza optiunea \n"Valoarea de referita")
+(START)<--(apasa buton "Reset")
+(apasa buton "Reset")-->(reseteaza la valorile initiale)
+(Selecteaza optiunea \n"Alege Operator")-->(afiseaza operatori)
+(afiseaza operatori)-->(selecteaza un operator)
+(selecteaza un operator)-->(memoreaza operator)
+
+(Selecteaza optiunea \n"Input Tablou")-->(afiseaza input pentru \nsetul de numere)
+(afiseaza input pentru \nsetul de numere)-->(Introduce set 10 numere)
+(Introduce set 10 numere)-->(memoreaza numerele)
+
+(Selecteaza optiunea \n"Valoarea de referita")-->(afiseaza input)
+(afiseaza input)-->(introduce valoarea de referinta)
+
+Utilizator->(apasa buton "Cauta referinta")
+(apasa buton "Cauta referinta")->(cauta in setul de numere \nconform selectiei operatorului \nsi \nvalorii de referinta)
+(cauta in setul de numere \nconform selectiei operatorului \nsi \nvalorii de referinta)-->(afiseaza numerele gasite): IF YES
+(cauta in setul de numere \nconform selectiei operatorului \nsi \nvalorii de referinta)-->(afiseaza mesaj eroare \nnumarul nu a fost gasit): IF NO
+
+@enduml
