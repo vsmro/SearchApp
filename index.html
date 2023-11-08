@@ -10,32 +10,36 @@
 <div class="selectOptions" id="selectOptions">
     <select name="Options" id="">
         <option value="">--Please select an option--</option>
-        <option value="alegeOperator" id="alegeOperator">Alege Operator</option>
-        <option value="inputTablou" id="inputTablou">Input Tablou</option>
+        <option value="alegeOperator" id="alegeOperator" ><p onclick="displayDivOptions()">Alege Operator</p></option>
+        <option value="inputTablou" id="inputTablou" onclick="createNumberTablou()">Input Tablou</option>
         <option value="referinta" id="referinta">Stabileste referinta</option>
     </select>
 </div>
 <div class="buttons" id="buttons">
-    <button>Cauta</button>
-    <button>Reset</button>
+    <button id="searchBtn" value="cauta">Cauta</button>
+    <button id="resetBtn" value="reset" onclick="resetApp()">Reset</button>
 </div>
-<div class="operatori">
+<div class="operatori" id="operatori">
     <p>Please select one of the operators</p>
-    <button value="==">==</button>
-    <button value="!=">!=</button>
-    <button value="!==">!==</button>
-    <button value="===">===</button>
-    <button value="<"><</button>
-    <button value=">">></button>
-    <button value=">="><=</button>
+    <select name="operatorList" id="operatorList" onclick="operatorSelect()">
+        <option value="" selected>--Please select operator--</option>
+        <option value="==">==</option>
+        <option value="!=">!=</option>
+        <option value="!==">!==</option>
+        <option value="===">===</option>
+        <option value="<"><</option>
+        <option value=">"> ></option>
+        <option value="=<">=<</option>
+    </select>
 </div>
-<div class="inputTablou">
+<div class="inputNumber" id="inputNumber">
     <p>Insert a number for each field</p>
-    <p>.... a js function to generate 10 input fields...hope i'll do it</p>
+    <div id="inputNumbers"></div>
+    <button id="saveTablou">Save numbers</button>
 </div>
-<div class="referinta">
+<div class="referinta" id="referintaDiv">
     <label for="referintaInput">Please enter the reference number</label><br>
-    <input type="text" id="referintaInput">
+    <input type="text" id="referintaInput" size="3">
 </div>
 <div class="displayResult">
     <p>Here will be the output</p>

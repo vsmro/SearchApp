@@ -20,7 +20,7 @@ class Tablou {
 numberInput : Int
 numberTablou : Array
 
-numberInser()
+numberInsert()
 numberSave()
 numberTablouCheckLenght()
 }
@@ -30,8 +30,8 @@ referintaInput : Int
 }
 
 class Buton {
-reset
-search
+resetBtn
+searchBtn
 
 resetApp()
 searchReference()
