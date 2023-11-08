@@ -1,5 +1,48 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class Empty {}
+class LandingPage {
+displayResult()
+displayErrorMessage()
+}
+
+class Meniu {}
+
+class Optiune {}
+
+class Operator {
+operatorList : Array
+operatorSelect()
+operatorSave()
+}
+
+class Tablou {
+numberInput : Int
+numberTablou : Array
+
+numberInser()
+numberSave()
+numberTablouCheckLenght()
+}
+
+class Referinta {
+referintaInput : Int
+}
+
+class Buton {
+reset
+search
+
+resetApp()
+searchReference()
+}
+
+LandingPage *-- Meniu
+LandingPage *-- Buton
+
+Meniu *-- Optiune
+
+Optiune *-- Operator
+Optiune *-- Tablou
+Optiune *-- Referinta
 @enduml
