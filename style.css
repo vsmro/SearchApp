@@ -4,6 +4,6 @@ div {
    border-bottom-style: dotted;
 }
 
-/*.operatori, .inputNumber, .referinta {*/
-/*   display: none;*/
-/*}*/
+.operatori, .inputNumber, .referinta {
+   display: none;
+}

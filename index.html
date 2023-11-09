@@ -8,15 +8,15 @@
 </head>
 <body>
 <div class="selectOptions" id="selectOptions">
-    <select name="Options" id="">
+    <select name="Options" id="selectOption" onchange="displayDiv()">
         <option value="">--Please select an option--</option>
-        <option value="alegeOperator" id="alegeOperator" ><p onclick="displayDivOptions()">Alege Operator</p></option>
-        <option value="inputTablou" id="inputTablou" onclick="createNumberTablou()">Input Tablou</option>
+        <option value="alegeOperator" id="alegeOperator">Alege Operator</option>
+        <option value="inputTablou" id="inputTablou">Input Tablou</option>
         <option value="referinta" id="referinta">Stabileste referinta</option>
     </select>
 </div>
 <div class="buttons" id="buttons">
-    <button id="searchBtn" value="cauta">Cauta</button>
+    <button id="searchBtn" value="cauta" onclick="displayResult()">Cauta</button>
     <button id="resetBtn" value="reset" onclick="resetApp()">Reset</button>
 </div>
 <div class="operatori" id="operatori">
@@ -34,8 +34,19 @@
 </div>
 <div class="inputNumber" id="inputNumber">
     <p>Insert a number for each field</p>
-    <div id="inputNumbers"></div>
-    <button id="saveTablou">Save numbers</button>
+    <div id="inputNumbers">
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField">
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField">
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField">
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField">
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField"><br>
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField">
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField">
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField">
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField">
+        <input type="text" name="array[]" value="" size="2" class="inputNumpersField">
+    </div>
+    <button id="saveTablou" onclick="numberInsertFieldsSave()">Save numbers</button>
 </div>
 <div class="referinta" id="referintaDiv">
     <label for="referintaInput">Please enter the reference number</label><br>
