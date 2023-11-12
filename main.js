@@ -50,30 +50,33 @@ function operatorSelect() {
 }
 
 //constructor dinamic fields for numbers
-// function numberInsertFields() {
-//     let inputFields = document.getElementById("inputNumbers");
-//
-//     let field = document.createElement("input")
-//         field.setAttribute("type", "text")
-//         field.setAttribute("size","3")
-//         inputFields.append(field)
-//     console.log(inputFields)
-//         for(let i=0; i<10; i++){
-//            // console.log(inputFields.appendChild(field))
-//
-//         }
-//
-// }
-// numberInsertFields()
+function numberInsertFields() {
+    let inputFields = document.getElementById("inputNumbers");
+
+
+
+        for(let i=0; i<10; i++){
+            let field = document.createElement("input")
+            field.setAttribute("type", "text")
+            field.setAttribute("size","3")
+            field.setAttribute("name", "field")
+            field.setAttribute("class", "ninputfield")
+            inputFields.appendChild(field)
+
+        }
+
+}
+//calling the
+numberInsertFields()
 // try to get values form all elements by className/Name or anyother selector
 function numberInsertFieldsSave() {
-    let inptts = document.getElementsByName("array[]")
+    let inptts = document.getElementsByName("field")
 
     for(let i=0; i<inptts.lenght; i++) {
-        let arr = inptts[i].value;
-        console.log(arr)
-    }
-    console.log(numberTablou)
+        inptts[i].value;
+        console.log(inptts[i].value)
+
+     }
 }
 
 //display error message
@@ -86,17 +89,46 @@ function displayResult() {
     let referinta = document.getElementById("referintaInput").value;
     let tablou= [33, 44, 55, 66, 777, 90, 12, 37, 89, 1000];
 
-    for(let i=0; i<tablou.length; i++) {
-
-    console.log()
-        if(tablou[i] +" "+operator+" "+referinta) {
-
-            for(let key in tablou[i] ) {
-                console.log("Numbers are: " + tablou[i] )
+    switch(operator) {
+        case "==":
+            for(let i=0; i<tablou.length; i++) {
+                if(tablou[i] == referinta) {
+                    console.log(tablou)
+                }
             }
-
-        }else {
-            displayErrorMessage();
-        }
+            break;
+        case "!=":
+            //
+            break;
+        case "!==":
+            //
+            break;
+        case "===":
+            //
+            break;
+        case "<":
+            //
+            break;
+        case ">":
+            //
+            break;
+        case "=<":
+            //
+            break;
+        default:
+        displayErrorMessage()
     }
+    // for(let i=0; i<tablou.length; i++) {
+    //
+    //
+    //     if(tablou[i] +" "+operator+" "+referinta) {
+    //
+    //         for(let key in tablou[i] ) {
+    //             console.log("Numbers are: " + tablou[i] )
+    //         }
+    //
+    //     }else {
+    //         displayErrorMessage();
+    //     }
+    // }
 }
